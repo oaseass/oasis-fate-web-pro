@@ -60,3 +60,10 @@ export async function POST(req: NextRequest) {
     headers: { "Content-Type": "text/plain; charset=utf-8" }
   });
 }
+// 👇 맨 마지막에 추가
+export async function GET() {
+  return new Response(
+    "Use POST with FormData (faceImage, birthDate, birthTime, birthPlace, userQuestion).",
+    { status: 200, headers: { "Content-Type": "text/plain; charset=utf-8" } }
+  );
+}
